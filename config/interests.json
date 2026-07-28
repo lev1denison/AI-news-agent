@@ -1,0 +1,26 @@
+{
+  "categories": [
+    {
+      "name": "AI & LLM News",
+      "topic": "news",
+      "queries": [
+        "AI agent news today",
+        "Large language model updates today",
+        "Anthropic News today",
+        "OpenAI news today"
+      ]
+    },
+    {
+      "name": "Financial & Stock Market News",
+      "topic": "finance",
+      "queries": [
+        "stock market news today",
+        "financial news of the day",
+        "VOO ETF News today",
+        "S&P 500 News today",
+        "QQQ News today",
+        "VXUS News today"
+      ]
+    }
+  ]
+}
