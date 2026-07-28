@@ -4,22 +4,16 @@
       "name": "AI & LLM News",
       "topic": "news",
       "queries": [
-        "AI agent news today",
-        "Large language model updates today",
-        "Anthropic News today",
-        "OpenAI news today"
+        "(artificial intelligence OR generative AI OR GenAI OR LLM OR \"large language model\" OR \"AI agent\") (OpenAI OR Anthropic OR Google DeepMind OR Gemini OR Microsoft Copilot OR Meta AI OR xAI OR Mistral OR NVIDIA) (news OR launch OR release OR update OR partnership OR funding OR acquisition OR outage)",
+        "(AI models OR AI agents OR AI chips OR machine learning OR foundation models) (research OR benchmark OR regulation OR copyright OR lawsuit OR safety OR security OR enterprise adoption OR data center OR inference OR training) news"
       ]
     },
     {
       "name": "Financial & Stock Market News",
       "topic": "finance",
       "queries": [
-        "stock market news today",
-        "financial news of the day",
-        "VOO ETF News today",
-        "S&P 500 News today",
-        "QQQ News today",
-        "VXUS News today"
+        "(stock market OR equities OR S&P 500 OR Nasdaq OR Dow OR VOO OR QQQ OR VXUS) (news OR futures OR premarket OR rally OR selloff OR earnings OR guidance OR upgrade OR downgrade OR market movers)",
+        "(Federal Reserve OR FOMC OR inflation OR CPI OR PCE OR jobs report OR unemployment OR GDP OR Treasury yields OR interest rates OR tariffs OR oil prices) (stocks OR markets OR economy OR investor outlook)"
       ]
     }
   ]
