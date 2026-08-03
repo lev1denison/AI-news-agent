@@ -49,6 +49,7 @@ def discover_articles():
                         "title": result.get("title"),
                         "url": url,
                         "snippet": result.get("content"),
+                        "published_date": result.get("published_date"),
                     }
                 )
 

@@ -42,7 +42,13 @@ def scrape_article(article):
     if is_boilerplate(text):
         return None
 
-    return {**article, "text": text}
+    result = {**article, "text": text}
+
+    metadata = trafilatura.extract_metadata(downloaded)
+    if metadata and metadata.date:
+        result["published_date"] = metadata.date
+
+    return result
 
 
 def scrape_articles(articles):
