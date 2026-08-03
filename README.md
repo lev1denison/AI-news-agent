@@ -62,7 +62,13 @@ src/main.py                pipeline orchestration
    TAVILY_API_KEY=your_key_here
    GROQ_API_KEY=your_key_here
    RESEND_API_KEY=your_key_here
+   FROM_EMAIL=your_sender_address
+   TO_EMAIL=your_recipient_address
    ```
+
+   Until you verify your own domain in Resend, `FROM_EMAIL` must be the
+   shared test sender (`onboarding@resend.dev`) and `TO_EMAIL` must match
+   the email address on your Resend account.
 
 4. Edit `config/interests.json` to set your own categories and search
    queries.
@@ -93,13 +99,30 @@ Each module can be run on its own for testing:
 python src/discover.py     # print discovered articles by category
 python src/scrape.py       # discover, then scrape and print article text
 python src/embed.py        # discover, scrape, then rank by relevance
+python src/summarize.py    # discover, scrape, rank, then summarize top articles
+python src/deliver.py      # run the full pipeline and send the digest email
+python src/main.py         # same as deliver.py, with stage-by-stage logging
 ```
 
 ## Status
 
-Discover, scrape, and embed/rank are implemented and working. Summarize,
-deliver, main, the feedback loop, and the GitHub Actions workflow are not
-yet built.
+The full pipeline (discover, scrape, embed/rank, summarize, deliver, main)
+is implemented and has been run end to end against live APIs, including
+sending a real digest email.
+
+Remaining for phase 1:
+
+- `.github/workflows/daily_digest.yml`, to run the pipeline on a schedule.
+  This should also cache the Hugging Face model directory so the
+  embedding model isn't re-downloaded on every run.
+- Verifying a domain in Resend, so the digest can be sent to a real
+  recipient address instead of the Resend account owner's email (a
+  restriction of the shared test sender).
+- Optional: recency-weighted ranking. `embed.py` currently ranks purely
+  by semantic similarity; Tavily's `published_date` per article isn't
+  yet captured or used as a ranking signal.
+
+Phase 2 (feedback loop and `rank.py`) has not been started.
 
 ## Notes
 
