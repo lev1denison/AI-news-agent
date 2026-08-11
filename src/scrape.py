@@ -14,10 +14,13 @@ BOILERPLATE_MARKERS = [
 ]
 
 NON_ARTICLE_URL_PATTERNS = [
+    r"^https?://[^/]+/?$",
     r"/history$",
     r"/community$",
     r"/quote/[^/]+$",
     r"/quote/[^/]+/$",
+    r"/calendar(/|$|\?)",
+    r"/key-statistics$",
 ]
 
 

@@ -10,7 +10,7 @@
     },
     {
       "name": "Financial & Stock Market News",
-      "topic": "finance",
+      "topic": "news",
       "queries": [
         "(stock market OR equities OR S&P 500 OR Nasdaq OR Dow OR VOO OR QQQ OR VXUS) (news OR futures OR premarket OR rally OR selloff OR earnings OR guidance OR upgrade OR downgrade OR market movers)",
         "(Federal Reserve OR FOMC OR inflation OR CPI OR PCE OR jobs report OR unemployment OR GDP OR Treasury yields OR interest rates OR tariffs OR oil prices) (stocks OR markets OR economy OR investor outlook)"
